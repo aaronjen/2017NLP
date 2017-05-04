@@ -13,7 +13,7 @@ for key in aspect:
     seed = aspect[key].copy()
     term = aspect[key]
     for i in seed:
-        similars = w2v.most_similar(i)
+        similars = w2v.most_similar(i, topn=10)
         term.update([i[0] for i in similars])
 for key, value in aspect.items():
     aspect[key] = list(value)
