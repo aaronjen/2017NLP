@@ -56,25 +56,3 @@ for ob in reviews:
 
 json.dump(predicts, open('predicts.json', 'w'))
 
-# for ob in reviews:
-#     polarity_dict = {"環境":0,"服務":0,"價格":0,"交通":0,"餐廳":0}
-#     for sent in review:
-#         aspect = get_aspect(sent)
-#         if not aspect or polarity_dict[aspect] != 0:
-#             continue
-
-#         polarity = 0
-#         for pos in positive_list:
-#             if (pos in sent):
-#                 polarity = 1
-#                 break
-#         for neg in negative_list:
-#             if (neg in sent):
-#                 polarity = -1
-#                 break
-#         polarity_dict[aspect] = polarity
-
-#     predicts.append({
-#         'id': ob['id'],
-#         'polarity': polarity_dict
-#         })
